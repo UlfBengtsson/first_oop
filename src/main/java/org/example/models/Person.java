@@ -13,7 +13,7 @@ public class Person {
         this.carOwed = car;
     }
 
-    public String infomation() {
+    public String information() {
         return  "Id: " + id +
                 " Name: " + name +
                 " Car id of owed: " + carOwed.getId();

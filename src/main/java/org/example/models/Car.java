@@ -31,6 +31,10 @@ public class Car {
     }
 
     //Getters & Setters
+    public int getId() {
+        return id;
+    }
+
     public String getRegPlate() {
         return regPlate;
     }
@@ -78,8 +82,14 @@ public class Car {
 
     }
 
-    public int getId() {
-        return id;
+    public boolean setMaxSpeed(int maximum) {
+        if (maximum < 0) {
+            return false;
+        }
+        else {
+            maxSpeed = maximum;
+            return true;
+        }
     }
 
     public static int getIdCounter() {

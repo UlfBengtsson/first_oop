@@ -27,6 +27,6 @@ public class App
 
         Person ulf = new Person("Ulf", myCurrentCar);
 
-        System.out.println( ulf.infomation() );
+        System.out.println( ulf.information() );
     }
 }
