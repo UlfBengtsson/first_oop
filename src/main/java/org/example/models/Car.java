@@ -4,7 +4,11 @@ package org.example.models;
 //K.I.S.S.
 
 public class Car {
+    //static is bound to Car class and not Car object
+    private static int idCounter = 0;//can also be seen as how many cars objects has bin created.
+
     //field
+    private int id;
     private String regPlate;
     private String modelName;
     private String brand;
@@ -13,6 +17,7 @@ public class Car {
 
     //if there is no constructor(s), java will make a "zero" constructor as default.
     public Car() {
+        id = ++idCounter;
         setBrand("No brand");
         setModelName("No model");
         setRegPlate("No reg");
@@ -71,5 +76,18 @@ public class Car {
             return true;
         }
 
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public static int getIdCounter() {
+        return idCounter;
+    }
+
+    //need this for testing
+    public static void resetIdCounter() {
+        idCounter = 0;
     }
 }
